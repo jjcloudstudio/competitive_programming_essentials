@@ -14,4 +14,6 @@ month_conversion = {
 }
 
 #print(month_conversion["aug"])
-print(month_conversion.get("aug"))
+#print(month_conversion.get("aug"))
+print(month_conversion.get("abc", "not a valid key"))
+print(month_conversion.get("lower.Jan", "not a valid key"))
