@@ -1,5 +1,5 @@
 month_conversion = {
-    "jan": "January",
+    "JAN": "January",
     "feb": "February",
     "mar": "March",
     "apr": "April",
@@ -13,7 +13,9 @@ month_conversion = {
     "dec": "December",
 }
 
-#print(month_conversion["aug"])
-#print(month_conversion.get("aug"))
+dict((k.lower(), v) for k,v in {'My Key':'My Value'}.items())
+
+print(month_conversion["aug"])
+print(month_conversion.get("aug", "not a valid key"))
 print(month_conversion.get("abc", "not a valid key"))
-print(month_conversion.get("lower.Jan", "not a valid key"))
+print(month_conversion.get("jan", "not a valid key"))
