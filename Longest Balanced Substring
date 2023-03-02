@@ -1,0 +1,22 @@
+def max_length_balanced_braces(str_braces):
+    stack_braces = []
+    list_count = []
+    count = 0
+    for ch in str_braces:
+        if ch == "{":
+            stack_braces.append(ch)
+        elif stack_braces:
+            count += 1
+            stack_braces.pop()
+        else:
+            list_count.append(count)
+            count = 0
+    return max(list_count)*2
+
+braces = "{}{}}"
+count = max_length_balanced_braces(braces)
+print(f"Maximum length of balanced substring {braces} is {count}")
+ 
+braces = "{}{{}}}}}"
+count = max_length_balanced_braces(braces)
+print(f"Maximum length of balanced substring {braces} is {count}"
